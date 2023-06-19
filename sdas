@@ -24,10 +24,9 @@ local Mouse = {raycastParams = RaycastParams.new(), Hit = CFrame.new(0, 0, 0), T
     end)
 end
 
-while true do
-wait()
-task.wait(math.random(60, 600))
-game:GetService("ReplicatedStorage").CharacterSoundEvent:FireServer()
-end
+task.spawn(function()
+  task.wait(math.random(60, 300))
+  game:GetService("ReplicatedStorage").CharacterSoundEvent:FireServer()
+end)
 
 return Mouse
