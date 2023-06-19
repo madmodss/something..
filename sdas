@@ -16,7 +16,6 @@ local Mouse = {raycastParams = RaycastParams.new(), Hit = CFrame.new(0, 0, 0), T
             pcall(function()
                 local hit = roblox_mouse.Hit.Position
                 local ray = workspace:Raycast(camera.CFrame.Position, (hit - camera.CFrame.Position).Unit * 500, Mouse.raycastParams)
-print("you are all a bunch of gay little niggers")
                 local rayPos = (ray and ray.Position) or hit
                 Mouse.Hit = CFrame.new(ray.Position)
                 Mouse.Target = (ray and ray.Instance) or nil
